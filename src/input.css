@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* .scrollList{
+  transform: rotate(-180deg);
+} */
+.scroll::-webkit-scrollbar{
+  
+  width: 2px;
+  background-color: yellow;
+  
+}
+.scroll::-webkit-scrollbar-track {
+ 
+  background-color: black;
+  padding: 0 5px;
+  
+
+} 
+
+.scroll::-webkit-scrollbar-button{
+  display: none;
+}
+.scroll::-webkit-scrollbar-thumb{
+background-color: red;
+
+}
+/* ::-webkit-scrollbar-button {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fe0000;
+}
+::-webkit-scrollbar-track {
+  background-color: black;
+  border: 1px solid #807314
+} */
+
+.wrapper{
+  background-image: url("/images/hero-background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.gradient{
+  background-image: linear-gradient(305.17deg,#a8ff78 15.89%,#1fffbb 237.61%);
+}
+
+.expGradient{
+  background-image: linear-gradient(107.13deg,#903afe 27.77%,#3e1fff 88.3%);
+  border-radius: 24px;
+}
+.specialText{
+  background: -webkit-linear-gradient(305.17deg,#a8ff78 15.89%,#1fffbb 237.61%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: max-content;
+}
+
+.Checkout{
+  background-image: url(https://res.cloudinary.com/fluidcoins/image/upload/v1662473766/marketing-site/fluidcoins-v3/green-gradient.png);
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+.Checkout a{
+  background-color: black;
+  color: white;
+}
+
+.Earn{
+  background-position: right bottom;
+    background-repeat: no-repeat;
+    background-image: url(https://res.cloudinary.com/fluidcoins/image/upload/v1662473769/marketing-site/fluidcoins-v3/Group_82_2_ksvklf.png);
+    background-color: black;
+}
+.Earn h2, .Earn p{
+  color: white;
+}
+.Earn a{
+  background-color: rgb(204, 204, 204);
+  color: black;
+}
+.Earn button{
+ color: white;
+}
+
+.Liquidity{
+  background-color: rgb(3, 35, 67);
+  color: white;
+}
+.Liquidity a{
+  background-color: rgb(204, 204, 204);
+  color: black;
+}
+.Liquidity button{
+ color: white;
+}
+
+.Wallet{
+  background-position: right bottom;
+    background-repeat: no-repeat;
+    background-image: url(https://res.cloudinary.com/fluidcoins/image/upload/v1662473764/marketing-site/fluidcoins-v3/Group_82_u4w1h0.png);
+}
+.Wallet a{
+   background-color: black;
+  color: white;
+}
+
+.greenBg{
+  background: linear-gradient(305.17deg,#a8ff78 15.89%,#1fffbb 237.61%);
+}
+.imgBg{
+  background-image: url(https://res.cloudinary.com/fluidcoins/image/upload/v1663022514/marketing-site/fluidcoins-v3/feature-gradient_ezctsm.png);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
