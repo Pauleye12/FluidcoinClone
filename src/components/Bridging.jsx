@@ -56,6 +56,17 @@ function Bridging() {
         repeat: 0,
       },
     },
+    inViewNoDel: {
+      scale: 1,
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+  
+        ease: "easeOut",
+        repeat: 0,
+      },
+    },
   };
   return (
     <div className="lg:h-screen w-screen bg-black lg:overflow-hidden  ">
@@ -87,7 +98,7 @@ function Bridging() {
             <motion.div
               variants={textVariant}
               initial="initial"
-              whileInView="inView"
+              whileInView="inViewNoDel"
               className=" mt-10 scroll max-w-xl w-full h-full overflow-y-auto px-[20px] pl-[40px] flex flex-col gap-[44px] pb-10 "
             >
               {rightCont.map((card, index) => (
