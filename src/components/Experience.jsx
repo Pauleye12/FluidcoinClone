@@ -6,6 +6,7 @@ import { Wallet } from './SVGs/wallet';
 import Card from './Card';
 import { CheckoutArr } from './SVGs/checkoutArrow';
 import { EarnArr } from './SVGs/earnArrow';
+import { motion } from 'framer-motion';
 
 function Experience() {
     const cardCont = [
@@ -42,19 +43,71 @@ function Experience() {
         arrowStyle: <EarnArr />,
       },
     ];
+
+    const bgVariant ={
+      initial: {
+        scale:0.3,
+        opacity: 0,
+        y:"0.1px"
+      },
+      inView:{
+        scale: 1,
+        opacity: 1,
+        y:0,
+        transition: {
+          duration: 0.6,
+          ease: "easeOut",
+      repeat:0
+        }
+      }
+  }
+  const cardVariant = {
+    initial: {
+      scale: 0.3,
+      opacity: 0,
+      y: "10px",
+    },
+    inView: {
+      scale: 1,
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.3,
+        duration: 0.6,
+        ease: "easeOut",
+        
+      },
+    },
+  };
   return (
-    <div className=" lg:px-[24px] px-2  ">
-      <div className="expGradient flex flex-col xl:flex-row justify-between gap-[30px] w-full pt-[40px] pb-[28px] lg:py-[80px] px-[20px] lg:px-[48px] ">
-        <div>
-          <h2 className="capitalize text-white font-[700] xl:max-w-[300px] w-full text-[24px] lg:text-[36px] ">
-            A seamless experience for your business and customers
-          </h2>
-        </div>
+    <motion.div
+      variants={bgVariant}
+      initial="initial"
+      whileInView="inView"
+      className=" lg:px-[24px] px-2  "
+    >
+      <motion.div className="expGradient flex flex-col xl:flex-row justify-between gap-[30px] w-full pt-[40px] pb-[28px] lg:py-[80px] px-[20px] lg:px-[48px] ">
+        <motion.h2
+          variants={cardVariant}
+          initial="initial"
+          whileInView="inView"
+          className="capitalize text-white font-[700] xl:max-w-[300px] w-full text-[24px] lg:text-[36px] "
+        >
+          A seamless experience for your business and customers
+        </motion.h2>
+
         <div className="flex flex-col gap-[20px]">
           <div className="grid gap-[10px] lg:gap-5 grid-cols-[1fr] md:grid-cols-[1fr_1fr]">
             {" "}
             {cardCont.map((content, index) => (
-              <Card content={content} key={index} />
+              <motion.div
+                variants={cardVariant}
+                initial="initial"
+                whileInView="inView"
+                key={index}
+              >
+                <Card content={content} />
+              </motion.div>
             ))}{" "}
           </div>
           <div className="flex justify-between bg-white xl:max-w-[407px] w-full items-center rounded-[1000px] self-end py-[8px] pl-[20px] pr-[8px] ">
@@ -64,8 +117,8 @@ function Experience() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

@@ -6,7 +6,7 @@ export const RightArrow = () => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
-        class=""
+        
       >
         <path
           data-v-eca9b15a=""

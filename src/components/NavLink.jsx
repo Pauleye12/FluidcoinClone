@@ -1,10 +1,13 @@
 import React from "react";
 import { Dropdown } from "./Dropdown";
+import { motion } from "framer-motion";
 
-function NavLink({ navLink }) {
+function NavLink({ navLink, showDropdown }) {
+  const variants = {
+    
+  };
   return (
-    <li className="">
-      {" "}
+   
       <a
         className={
           navLink.active
@@ -17,9 +20,9 @@ function NavLink({ navLink }) {
       >
         {navLink.link}
 
-        {navLink.dropDown && <Dropdown />}
-      </a>{" "}
-    </li>
+        {navLink.dropDown && <Dropdown  />}
+      </a>
+    
   );
 }
 
